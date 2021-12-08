@@ -21,5 +21,5 @@ void main() {
   //         children: [Text("hell")],
   //       ),
   //     )));
-  runApp(UiTest());
+  runApp(UiStateLessWidget());
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class UiTest extends StatelessWidget {
+class UiStateLessWidget extends StatelessWidget {
+  const UiStateLessWidget({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,18 +18,18 @@ class UiTest extends StatelessWidget {
           ),
         ),
         appBar: AppBar(
-          leading: IconButton(
+          leading: const IconButton(
             icon: Icon(Icons.menu),
             tooltip: 'Navigation',
             onPressed: null,
           ),
-          title: Center(
+          title: const Center(
               child: Text(
             "Home",
             style: TextStyle(
                 fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
           )),
-          actions: [
+          actions: const [
             IconButton(
               onPressed: null,
               icon: Icon(Icons.search),
@@ -39,28 +40,28 @@ class UiTest extends StatelessWidget {
           color: Colors.green[100],
           child: Column(
             children: [
-              Text(
+              const Text(
                 "Pham Tien Dat",
                 style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: Colors.red),
               ),
-              Text(
+              const Text(
                 "Pham Tien Dat",
                 style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: Colors.red),
               ),
-              Text(
+              const Text(
                 "Pham Tien Dat",
                 style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: Colors.red),
               ),
-              Text(
+              const Text(
                 "Pham Tien Dat",
                 style: TextStyle(
                     fontSize: 20,
@@ -71,7 +72,7 @@ class UiTest extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
+                  children: const [
                     Expanded(
                       flex: 1,
                       child: Text(
@@ -101,11 +102,11 @@ class UiTest extends StatelessWidget {
                   style: OutlinedButton.styleFrom(
                       backgroundColor: Colors.orange,
                       primary: Colors.red,
-                      side: BorderSide(color: Colors.black)),
+                      side: const BorderSide(color: Colors.black)),
                   onPressed: () {
                     print("Click me");
                   },
-                  child: Text("Click me",
+                  child: const Text("Click me",
                       style: TextStyle(fontWeight: FontWeight.bold))),
             ],
           ),
@@ -113,17 +114,15 @@ class UiTest extends StatelessWidget {
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: 0,
           fixedColor: Colors.blue,
-          items: [
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.home), title: Text('Home')),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.search), title: Text('Search')),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.account_circle), title: Text('User Profile'))
+                icon: Icon(Icons.account_circle), label: 'User Profile')
           ],
         ),
         floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
           tooltip: 'Add',
           onPressed: () {
             print("Onpressed ne");

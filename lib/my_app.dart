@@ -12,8 +12,8 @@ class _MyAppState extends State<MyApp> {
   final EmailController = TextEditingController();
   String _email = '';
   int count = 0;
-  incree() {
-    this.setState(() {
+  _incree() {
+    setState(() {
       count++;
     });
   }
@@ -28,35 +28,34 @@ class _MyAppState extends State<MyApp> {
                 child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(
+             Container(
                 child: TextField(
               controller: EmailController,
               onChanged: (text) {
-                this.setState(() {
+                setState(() {
                   _email = text;
                 });
               },
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                   border: OutlineInputBorder(
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(20))),
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
                   labelText: "Enter your email"),
             )),
             Text(
               _email,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 20, fontWeight: FontWeight.bold, color: Colors.red),
               textDirection: TextDirection.ltr,
             ),
             Text(
               '$count',
-              style: TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 20),
               textDirection: TextDirection.ltr,
             ),
             TextButton(
-              child: Text('Incree'),
+              child: const Text('Incree'),
               onPressed: () {
-                incree();
+                _incree();
               },
             )
           ],
