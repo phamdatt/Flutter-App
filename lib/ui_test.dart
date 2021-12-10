@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_app/app_ui.dart';
 
 class UiStateLessWidget extends StatelessWidget {
   const UiStateLessWidget({Key? key}) : super(key: key);
@@ -96,8 +97,7 @@ class UiStateLessWidget extends StatelessWidget {
                   ],
                 ),
               ),
-              Image.network(
-                  'https://scontent.fsgn2-4.fna.fbcdn.net/v/t45.1600-4/cp0/q75/spS444/p960x960/131234242_23846708573050298_7747116167779805889_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=67cdda&_nc_ohc=w9maiOVAQIEAX8JMEMZ&_nc_ht=scontent.fsgn2-4.fna&oh=0bd389649230116a0a5c5945fa634617&oe=61B3BCEB'),
+              Image.asset(AppUi.imagesSpalash),
               OutlinedButton(
                   style: OutlinedButton.styleFrom(
                       backgroundColor: Colors.orange,

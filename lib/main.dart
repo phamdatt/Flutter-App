@@ -5,6 +5,7 @@ import '_containers.dart';
 import '_material.dart';
 import 'learn_state_fullWIdget.dart';
 import 'ui_test.dart';
+import 'landing_page.dart';
 
 void main() {
   // runApp(MyApp());
@@ -21,5 +22,8 @@ void main() {
   //         children: [Text("hell")],
   //       ),
   //     )));
-  runApp(UiStateLessWidget());
+  runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'LandingPage',
+      home: LandingPage()));
 }
