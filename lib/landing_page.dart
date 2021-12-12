@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:my_app/home_page.dart';
 
 class LandingPage extends StatelessWidget {
   @override
@@ -14,23 +14,23 @@ class LandingPage extends StatelessWidget {
               Expanded(
                   child: Container(
                 alignment: Alignment.centerLeft,
-                child: Text("Welcome To",
+                child: const Text("Welcome To",
                     style: TextStyle(fontSize: 62, color: Colors.white)),
               )),
               Expanded(
                   child: Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
+                  children: const [
                     Text(
-                      "English",
+                      "Englishs",
                       style: TextStyle(
                           fontSize: 42,
                           color: Colors.black,
                           fontWeight: FontWeight.bold),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(right: 32),
+                      padding: EdgeInsets.only(right: 32),
                       child: Text(
                         "Quotes",
                         textAlign: TextAlign.right,
@@ -45,9 +45,13 @@ class LandingPage extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 72),
                 child: RawMaterialButton(
                   fillColor: Colors.blue[50],
-                  shape: CircleBorder(),
-                  child: Icon(Icons.chevron_right),
-                  onPressed: null,
+                  shape: const CircleBorder(),
+                  child: const Icon(Icons.chevron_right),
+                  onPressed: () {
+                    Navigator.pushAndRemoveUntil(
+                      context,MaterialPageRoute(builder: (_)=>HomePage()),(route)=>false);
+                    
+                  },
                 ),
               ))
             ],
