@@ -1,8 +1,11 @@
+import 'dart:math';
+
+import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/app_ui.dart';
+import 'package:my_app/models/english_today.dart';
 
 class HomePage extends StatefulWidget {
-  
   const HomePage({Key? key}) : super(key: key);
 
   @override
@@ -11,7 +14,43 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
-  PageController _pageController = PageController();
+  late PageController _pageController;
+  List<EnglishToday> words = [];
+  List<int> fixedlistRandom({int len = 1, int max = 120, int min = 1}) {
+    if (len > max || len < min) {
+      return [];
+    }
+    List<int> newList = [];
+    Random random = Random();
+    int count = 1;
+    while (count <= len) {
+      int val = random.nextInt(max);
+      if (newList.contains(val)) {
+        continue;
+      } else {
+        newList.add(val);
+        count++;
+      }
+    }
+    return newList;
+  }
+
+  getEnglishToday() {
+    List<String> newList = [];
+    List<int> rans = fixedlistRandom(len: 5, max: nouns.length);
+    rans.forEach((element) {
+      newList.add(nouns[element]);
+    });
+    words = newList.map((e) => EnglishToday(noun: e)).toList();
+  }
+
+  @override
+  void initState() {
+    _pageController = PageController(viewportFraction: 0.9);
+    getEnglishToday();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -26,10 +65,10 @@ class _HomePageState extends State<HomePage> {
         ),
         elevation: 0,
         backgroundColor: Colors.blue[50],
-        leading: InkWell(
-          onTap: () {},
-          child: const Icon(Icons.menu, color: Colors.black),
-        ),
+        // leading: InkWell(
+        //   onTap: () {},
+        //   child: const Icon(Icons.menu, color: Colors.black),
+        // ),
         actions: [],
       ),
       body: Container(
@@ -38,7 +77,7 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             Container(
               height: size.height * 1 / 10,
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.symmetric(horizontal: 24),
               alignment: Alignment.centerLeft,
               child: const Text(
                 "It is amaziong how complete is the delusion that beauty is goodness",
@@ -47,7 +86,6 @@ class _HomePageState extends State<HomePage> {
             ),
             Container(
               height: size.height * 2 / 3,
-              padding: const EdgeInsets.symmetric(horizontal: 24),
               child: PageView.builder(
                   controller: _pageController,
                   onPageChanged: (index) {
@@ -55,79 +93,111 @@ class _HomePageState extends State<HomePage> {
                       _currentIndex = index;
                     });
                   },
-                  itemCount: 5,
+                  itemCount: words.length,
                   itemBuilder: (context, index) {
-                    return Container(
-                      decoration: BoxDecoration(
-                          color: Colors.blue[100],
-                          borderRadius: const BorderRadius.all(
-                              const Radius.circular(24))),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            alignment: Alignment.centerRight,
-                            child: Image.asset(AppUi.imagesSpalash),
-                          ),
-                          RichText(
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                              textAlign: TextAlign.start,
-                              text: const TextSpan(
-                                  text: 'B',
-                                  style: TextStyle(
-                                      fontSize: 70,
-                                      fontWeight: FontWeight.bold,
-                                      shadows: [
-                                        BoxShadow(
-                                            color: Colors.black38,
-                                            offset: Offset(3, 6),
-                                            blurRadius: 6)
-                                      ]),
-                                  children: [
-                                    TextSpan(
-                                        text: 'eautiful',
-                                        style:
-                                            TextStyle(fontSize: 56, shadows: [
+                    String firstLetter =
+                        words[index].noun != null ? words[index].noun! : '';
+                    firstLetter = firstLetter.substring(0, 1);
+
+                    String leftLetter =
+                        words[index].noun != null ? words[index].noun! : '';
+                    leftLetter = leftLetter.substring(1, leftLetter.length);
+                    return Padding(
+                      padding: const EdgeInsets.all(4),
+                      child: Container(
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                            color: Colors.blue[100],
+                            borderRadius: const BorderRadius.all(
+                                const Radius.circular(24))),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              alignment: Alignment.centerRight,
+                              child: Image.asset(AppUi.imagesSpalash),
+                            ),
+                            RichText(
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                textAlign: TextAlign.start,
+                                text: TextSpan(
+                                    text: firstLetter,
+                                    style: const TextStyle(
+                                        fontSize: 70,
+                                        fontWeight: FontWeight.bold,
+                                        shadows: [
                                           BoxShadow(
-                                            color: Colors.white,
-                                            offset: Offset(0, 0),
-                                          )
-                                        ]))
-                                  ])),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 24),
-                            child: Text(
-                                "Think off all the beauty still left around you and be happy",
-                                style: const TextStyle(
-                                        fontSize: 14, color: Colors.white)
-                                    .copyWith(
-                                        letterSpacing:
-                                            1)), //coppyWith : add spacing text
-                          )
-                        ],
+                                              color: Colors.black38,
+                                              offset: Offset(3, 6),
+                                              blurRadius: 6)
+                                        ]),
+                                    children: [
+                                      TextSpan(
+                                          text: leftLetter,
+                                          style:
+                                              TextStyle(fontSize: 56, shadows: [
+                                            BoxShadow(
+                                              color: Colors.white,
+                                              offset: Offset(0, 0),
+                                            )
+                                          ]))
+                                    ])),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 24),
+                              child: Text(
+                                  "Think off all the beauty still left around you and be happy",
+                                  style: const TextStyle(
+                                          fontSize: 14, color: Colors.white)
+                                      .copyWith(
+                                          letterSpacing:
+                                              1)), //coppyWith : add spacing text
+                            )
+                          ],
+                        ),
                       ),
                     );
                   }),
             ),
-            Container(
-              height: 12,
-              alignment: Alignment.center,
-              margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 24),
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 5,
-                  itemBuilder: (context, index) {
-                    return buildIndicator(index == _currentIndex, size);
-                  }),
+            SizedBox(
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                height: 12,
+                alignment: Alignment.center,
+                margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 24),
+                child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      return buildIndicator(index == _currentIndex, size);
+                    }),
+              ),
             )
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            getEnglishToday();
+          });
+        },
         child: const Icon(Icons.refresh),
         backgroundColor: Colors.black,
+      ),
+      drawer: Drawer(
+        child: Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 24, left: 16),
+                  child: Text("Your mind",
+                      style: TextStyle(fontSize: 32, color: Colors.black)),
+                )
+              ],
+            ),
+            color: Colors.blue[100]),
       ),
     );
   }
@@ -138,7 +208,7 @@ class _HomePageState extends State<HomePage> {
       width: isAtive ? size.width * 1 / 5 : 24,
       decoration: BoxDecoration(
           color: isAtive ? Colors.blue[50] : Colors.blueGrey,
-          borderRadius: BorderRadius.all(const Radius.circular(8)),
+          borderRadius: const BorderRadius.all(const Radius.circular(8)),
           boxShadow: [
             BoxShadow(
                 color: Colors.black38, offset: Offset(2, 3), blurRadius: 3)

@@ -49,8 +49,9 @@ class LandingPage extends StatelessWidget {
                   child: const Icon(Icons.chevron_right),
                   onPressed: () {
                     Navigator.pushAndRemoveUntil(
-                      context,MaterialPageRoute(builder: (_)=>HomePage()),(route)=>false);
-                    
+                        context,
+                        MaterialPageRoute(builder: (_) => HomePage()),
+                        (route) => false);
                   },
                 ),
               ))
