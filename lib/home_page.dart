@@ -1,10 +1,12 @@
 import 'dart:math';
-
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/app_ui.dart';
-import 'package:my_app/models/app_button.dart';
+import 'package:my_app/control_page.dart';
+import 'package:my_app/widgets/app_button.dart';
 import 'package:my_app/models/english_today.dart';
+import 'package:my_app/values/shared_key.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -36,21 +38,25 @@ class _HomePageState extends State<HomePage> {
     return newList;
   }
 
-  getEnglishToday() {
+  getEnglishToday() async {
+    SharedPreferences perfs = await SharedPreferences.getInstance();
+    int len = perfs.getInt(SharedKeys.counter) ?? 5;
     List<String> newList = [];
-    List<int> rans = fixedlistRandom(len: 5, max: nouns.length);
+    List<int> rans = fixedlistRandom(len: len, max: nouns.length);
     rans.forEach((element) {
       newList.add(nouns[element]);
     });
-    words = newList.map((e) => EnglishToday(noun: e)).toList();
+    setState(() {
+      words = newList.map((e) => EnglishToday(noun: e)).toList();
+    });
   }
 
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   void initState() {
     _pageController = PageController(viewportFraction: 0.9);
-    getEnglishToday();
     super.initState();
+    getEnglishToday();
   }
 
   @override
@@ -215,7 +221,10 @@ class _HomePageState extends State<HomePage> {
                   child: AppButton(
                     title: "Your control",
                     onTap: () {
-                      print("Tuyet");
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (event) => ControllPage()));
                     },
                   ),
                 )
