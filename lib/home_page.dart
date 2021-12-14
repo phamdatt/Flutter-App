@@ -44,6 +44,7 @@ class _HomePageState extends State<HomePage> {
     });
     words = newList.map((e) => EnglishToday(noun: e)).toList();
   }
+
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   void initState() {
@@ -139,13 +140,14 @@ class _HomePageState extends State<HomePage> {
                                     children: [
                                       TextSpan(
                                           text: leftLetter,
-                                          style:
-                                              const TextStyle(fontSize: 56, shadows: [
-                                            BoxShadow(
-                                              color: Colors.white,
-                                              offset: Offset(0, 0),
-                                            )
-                                          ]))
+                                          style: const TextStyle(
+                                              fontSize: 56,
+                                              shadows: [
+                                                BoxShadow(
+                                                  color: Colors.white,
+                                                  offset: Offset(0, 0),
+                                                )
+                                              ]))
                                     ])),
                             Padding(
                               padding: const EdgeInsets.only(top: 24),
