@@ -157,7 +157,7 @@ class _HomePageState extends State<HomePage> {
                                           fontSize: 14, color: Colors.white)
                                       .copyWith(
                                           letterSpacing:
-                                              1)), //coppyWith : add spacing text
+                                              1)), //coppyWith : add spacing text////
                             )
                           ],
                         ),
