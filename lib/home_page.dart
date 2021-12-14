@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/app_ui.dart';
+import 'package:my_app/models/app_button.dart';
 import 'package:my_app/models/english_today.dart';
 
 class HomePage extends StatefulWidget {
@@ -43,7 +44,7 @@ class _HomePageState extends State<HomePage> {
     });
     words = newList.map((e) => EnglishToday(noun: e)).toList();
   }
-
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   void initState() {
     _pageController = PageController(viewportFraction: 0.9);
@@ -55,6 +56,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      key: _scaffoldKey,
       backgroundColor: Colors.blue[50],
       appBar: AppBar(
         title: const Center(
@@ -65,10 +67,12 @@ class _HomePageState extends State<HomePage> {
         ),
         elevation: 0,
         backgroundColor: Colors.blue[50],
-        // leading: InkWell(
-        //   onTap: () {},
-        //   child: const Icon(Icons.menu, color: Colors.black),
-        // ),
+        leading: InkWell(
+          onTap: () {
+            _scaffoldKey.currentState?.openDrawer();
+          },
+          child: const Icon(Icons.menu, color: Colors.black),
+        ),
         actions: [],
       ),
       body: Container(
@@ -194,6 +198,24 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.only(top: 24, left: 16),
                   child: Text("Your mind",
                       style: TextStyle(fontSize: 32, color: Colors.black)),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 24),
+                  child: AppButton(
+                    title: "Favorite",
+                    onTap: () {
+                      print("Tuyet");
+                    },
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 24),
+                  child: AppButton(
+                    title: "Your control",
+                    onTap: () {
+                      print("Tuyet");
+                    },
+                  ),
                 )
               ],
             ),
