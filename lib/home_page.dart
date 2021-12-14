@@ -140,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                                       TextSpan(
                                           text: leftLetter,
                                           style:
-                                              TextStyle(fontSize: 56, shadows: [
+                                              const TextStyle(fontSize: 56, shadows: [
                                             BoxShadow(
                                               color: Colors.white,
                                               offset: Offset(0, 0),
