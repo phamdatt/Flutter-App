@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_app/app_ui.dart';
 import 'package:my_app/theme/colors.dart';
+import 'package:my_app/widgets/bottom_nav.dart';
 import 'package:my_app/widgets/category_card.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -96,11 +97,19 @@ class HomeScreen extends StatelessWidget {
                 ))
               ],
             ),
-          ))
+          )),
         ],
+      ),
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+        height: 80,
+        color: Colors.white,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            BottomNavigator(title: 'Home', svg: AppUi.iconCalendar, onPress: (){})
+          ],),
       ),
     );
   }
 }
-
-
