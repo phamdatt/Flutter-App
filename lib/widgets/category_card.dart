@@ -5,12 +5,12 @@ import 'package:my_app/theme/colors.dart';
 class CategoryCard extends StatelessWidget {
   final String svgSrc;
   final String title;
-  final Function press;
+  final VoidCallback? press;
   const CategoryCard({
     Key? key,
     required this.svgSrc,
     required this.title,
-    required this.press,
+     this.press,
   }) : super(key: key);
 
   @override
@@ -31,7 +31,7 @@ class CategoryCard extends StatelessWidget {
         child: Material(
           color: Colors.transparent,
           child: InkWell(
-            onTap: press(),
+            onTap: press,
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
