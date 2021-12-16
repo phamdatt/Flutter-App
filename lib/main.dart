@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/screens/home_screen.dart';
+import 'package:my_app/screens/home_screen_shopping.dart';
+import 'package:my_app/theme/colors.dart';
 import 'my_app.dart';
 import '_test.dart';
 import '_containers.dart';
@@ -23,8 +25,12 @@ void main() {
   //         children: [Text("hell")],
   //       ),
   //     )));
+
   runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'HomeScreen',
-      home: HomeScreen()));
+      title: 'HomeShoppingPage',
+      theme: ThemeData(
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: HomeShoppingPage()));
 }

@@ -16,4 +16,15 @@ class AppUi {
   static final String iconYogaWomen = imagesPathIcon + 'yoga_women.svg';
   static final String iconGym = imagesPathIcon + 'gym.svg';
   static final String iconExcrecises = imagesPathIcon + 'Excrecises.svg';
+  static final String iconBag1 = imagesPath + 'bag_1.png';
+  static final String iconBag2 = imagesPath + 'bag_2.png';
+  static final String iconBag3 = imagesPath + 'bag_3.png';
+  static final String iconBag4 = imagesPath + 'bag_4.png';
+  static final String iconBag5 = imagesPath + 'bag_5.png';
+  static final String iconBag6 = imagesPath + 'bag_6.png';
+  static final String iconBack = imagesPathIcon +'back.svg';
+  static final String iconSearchExample02 = imagesPathIcon +'searchExample02.svg';
+  static final String iconCart = imagesPathIcon+'cart.svg';
+  static final String iconAddToCart = imagesPathIcon +'add_to_cart.svg';
+  static final String iconBag11 = imagesPathIcon +'bag1.svg';
 }
