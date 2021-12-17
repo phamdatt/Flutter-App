@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/screens/home_screen.dart';
+import 'package:my_app/screens/home_screen_example.dart';
 import 'package:my_app/screens/home_screen_shopping.dart';
 import 'package:my_app/theme/colors.dart';
 import 'my_app.dart';
@@ -32,5 +33,5 @@ void main() {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeShoppingPage()));
+      home: HomeScreenExample01()));
 }
