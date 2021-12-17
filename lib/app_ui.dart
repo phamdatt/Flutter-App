@@ -27,4 +27,5 @@ class AppUi {
   static final String iconCart = imagesPathIcon+'cart.svg';
   static final String iconAddToCart = imagesPathIcon +'add_to_cart.svg';
   static final String iconBag11 = imagesPathIcon +'bag1.svg';
+    static final String iconHeart = imagesPathIcon +'heart.svg';
 }

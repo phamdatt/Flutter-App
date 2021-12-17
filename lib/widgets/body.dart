@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/app_ui.dart';
+import 'package:my_app/screens/detail_shopping.dart';
 import 'package:my_app/theme/colors.dart';
 import 'package:my_app/models/Product.dart';
 
@@ -9,63 +10,6 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Product> products = [
-      Product(
-        id: 1,
-        image: AppUi.iconBag1,
-        title: 'Office code',
-        price: 234,
-        size: 12,
-        description: 'Select in fanstatic',
-        color: Color(0xFF3D82AE),
-      ),
-      Product(
-        id: 1,
-        image: AppUi.iconBag2,
-        title: 'Office code',
-        price: 234,
-        size: 12,
-        description: 'Select in fanstatic',
-        color: Color(0xFF3D82AE),
-      ),
-      Product(
-        id: 1,
-        image: AppUi.iconBag3,
-        title: 'Office code',
-        price: 234,
-        size: 12,
-        description: 'Select in fanstatic',
-        color: Color(0xFF3D82AE),
-      ),
-      Product(
-        id: 1,
-        image: AppUi.iconBag4,
-        title: 'Office code',
-        price: 234,
-        size: 12,
-        description: 'Select in fanstatic',
-        color: Color(0xFF3D82AE),
-      ),
-      Product(
-        id: 1,
-        image: AppUi.iconBag5,
-        title: 'Office code',
-        price: 234,
-        size: 12,
-        description: 'Select in fanstatic',
-        color: Color(0xFF3D82AE),
-      ),
-      Product(
-        id: 1,
-        image: AppUi.iconBag6,
-        title: 'Office code',
-        price: 234,
-        size: 12,
-        description: 'Select in fanstatic',
-        color: const Color(0xFF3D82AE),
-      )
-    ];
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -78,24 +22,68 @@ class Body extends StatelessWidget {
                   .copyWith(fontWeight: FontWeight.bold)),
         ),
         Categories(),
-        Column(
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              height: 180,
-              width: 160,
-              decoration: BoxDecoration(
-                  color: products[0].color,
-                  borderRadius: BorderRadius.circular(16)),
-              child: Image.asset(AppUi.iconBag1),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5),
-              child: Text(products[0].title,style: TextStyle(color:kTextColor)),
-            ),
-          ],
-        )
+        Expanded(
+            child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          child: GridView.builder(
+              scrollDirection: Axis.vertical,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 0.75,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+              ),
+              itemCount: products.length,
+              itemBuilder: (context, index) => ItemCard(
+                    product: products[index],
+                    onPress: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DetailShopping(
+                                    product: products[index],
+                                  )));
+                    },
+                  )),
+        )),
       ],
+    );
+  }
+}
+
+class ItemCard extends StatelessWidget {
+  final Product product;
+  final VoidCallback onPress;
+  const ItemCard({
+    Key? key,
+    required this.product,
+    required this.onPress,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: (){
+        onPress();
+      },
+      child: Column(
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                  color: product.color, borderRadius: BorderRadius.circular(16)),
+              child: Hero(
+                tag: "${product.id}",
+                child: Image.asset(product.image)),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: Text(product.title, style: TextStyle(color: kTextColor)),
+          ),
+        ],
+      ),
     );
   }
 }

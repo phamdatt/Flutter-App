@@ -23,6 +23,10 @@ class HomeShoppingPage extends StatelessWidget {
         icon: SvgPicture.asset(AppUi.iconBack),
         onPressed: () {},
       ),
+      title: Text(
+        'Home',
+        style: TextStyle(fontSize: 14, color: kTextColor),
+      ),
       actions: <Widget>[
         IconButton(
           onPressed: () {},
@@ -31,8 +35,10 @@ class HomeShoppingPage extends StatelessWidget {
         ),
         IconButton(
           onPressed: () {},
-          icon: Icon(Icons.shopping_bag),
-          color: kTextColor,
+          icon: SvgPicture.asset(
+            AppUi.iconCart,
+            color: kTextColor,
+          ),
         )
       ],
     );
