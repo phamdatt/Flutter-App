@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_app/app_ui.dart';
@@ -31,6 +33,7 @@ class DetailScreen extends StatelessWidget {
                 SizedBox(
                   height: size.height * 0.05,
                 ),
+                // ignore: prefer_const_constructors
                 Text("Meditation", style: TextStyle(fontWeight: FontWeight.bold)),
                 SizedBox(
                   height: 10,

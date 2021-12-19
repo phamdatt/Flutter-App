@@ -1,7 +1,6 @@
 // ignore_for_file: file_names
 
 // ignore: unused_import
-import 'package:my_app/models/Product.dart';
 import 'package:my_app/models/ProductExample01.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';

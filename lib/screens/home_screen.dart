@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_app/app_ui.dart';
@@ -40,6 +42,7 @@ class HomeScreen extends StatelessWidget {
                     alignment: Alignment.center,
                     height: 52,
                     width: 52,
+                    // ignore: prefer_const_constructors
                     decoration: BoxDecoration(
                       color: Color(0xFFF2BEA1),
                       shape: BoxShape.circle,

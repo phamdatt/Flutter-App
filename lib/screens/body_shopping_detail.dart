@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, deprecated_member_use, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_app/app_ui.dart';
@@ -22,9 +24,10 @@ class BodyShoppingDetail extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(top:size.height * 0.4),
                   padding:EdgeInsets.only(top:size.height * 0.12,left: 20,right: 20),
+                  // ignore: prefer_const_constructors
                   decoration: BoxDecoration(
                     color:Colors.white,
-                    borderRadius: BorderRadius.only(topLeft:Radius.circular(13),topRight: Radius.circular(13))
+                    borderRadius: const BorderRadius.only(topLeft:Radius.circular(13),topRight: Radius.circular(13))
                   ),
                   child: Column(children: <Widget>[
                     SizedBox(height: 10,),

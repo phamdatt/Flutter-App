@@ -22,10 +22,19 @@ class AppUi {
   static final String iconBag4 = imagesPath + 'bag_4.png';
   static final String iconBag5 = imagesPath + 'bag_5.png';
   static final String iconBag6 = imagesPath + 'bag_6.png';
-  static final String iconBack = imagesPathIcon +'back.svg';
-  static final String iconSearchExample02 = imagesPathIcon +'searchExample02.svg';
-  static final String iconCart = imagesPathIcon+'cart.svg';
-  static final String iconAddToCart = imagesPathIcon +'add_to_cart.svg';
-  static final String iconBag11 = imagesPathIcon +'bag1.svg';
-    static final String iconHeart = imagesPathIcon +'heart.svg';
+  static final String iconBack = imagesPathIcon + 'back.svg';
+  static final String iconSearchExample02 =
+      imagesPathIcon + 'searchExample02.svg';
+  static final String iconCart = imagesPathIcon + 'cart.svg';
+  static final String iconAddToCart = imagesPathIcon + 'add_to_cart.svg';
+  static final String iconBag11 = imagesPathIcon + 'bag1.svg';
+  static final String iconHeart = imagesPathIcon + 'heart.svg';
+  static final String logo = imagesPath + "logo.png";
+  static final String imagesCay1 = imagesPath + "cay1.png";
+  static final String imagesCay2 = imagesPath + "cay2.png";
+  static final String imagesCay3 = imagesPath + "cay3.png";
+  static final String imageBottom = imagesPath + "bottom.png";
+  static final String iconHearts = imagesPathIcon +"heart-icon.svg";
+   static final String iconFlower = imagesPathIcon +"flower.svg";
+    static final String iconSun = imagesPathIcon +"sun.svg";
 }

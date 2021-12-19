@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_app/app_ui.dart';
@@ -30,6 +32,7 @@ class DetailShopping extends StatelessWidget {
             Navigator.pop(context);
         },
       ),
+      // ignore: prefer_const_constructors
       title:Text('Chi tiết sản phẩm',style: TextStyle(
         fontSize: 15,
         color: kTextColor

@@ -7,3 +7,4 @@ const kBlueLightColor=Color(0xFFC7B8F5);
 const kBlueColor=Color(0xFF817DC0);
 const kShadowColor=Color(0xFFE6E6E6);
 const kHomeScreenColor =Color(0xFFF5CEB8);
+const kPrimaryColor = Color(0xFF0C9869);
