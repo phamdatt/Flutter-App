@@ -4,13 +4,7 @@ import 'package:my_app/screens/home_screen_example.dart';
 import 'package:my_app/screens/home_screen_example02.dart';
 import 'package:my_app/screens/home_screen_shopping.dart';
 import 'package:my_app/theme/colors.dart';
-import 'my_app.dart';
-import '_test.dart';
-import '_containers.dart';
-import '_material.dart';
-import 'learn_state_fullWIdget.dart';
-import 'ui_test.dart';
-import 'landing_page.dart';
+
 
 void main() {
   // runApp(MyApp());
