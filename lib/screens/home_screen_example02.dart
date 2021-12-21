@@ -5,6 +5,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:my_app/contants.dart';
 import 'package:my_app/theme/colors.dart';
 
+import 'detail_screen_example02.dart';
+
 class HomeScreenExample02 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,6 @@ class MyBottomNavigator extends StatelessWidget {
       padding: EdgeInsets.only(
         left: 40,
         right: 40,
-       
       ),
       height: 60,
       decoration: BoxDecoration(color: Colors.white, boxShadow: [
@@ -37,7 +38,6 @@ class MyBottomNavigator extends StatelessWidget {
             blurRadius: 35)
       ]),
       child: Row(
-      
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           IconButton(
@@ -154,7 +154,11 @@ class ItemPlanCard extends StatelessWidget {
           RecommendPlantCard(
             title: "Samantha\n",
             price: 440,
-            onPress: () {},
+            onPress: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return DetailExample02Screen();
+              }));
+            },
             image: AppUi.imagesCay1,
             country: "Russisa",
           ),
