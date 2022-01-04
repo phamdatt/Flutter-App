@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:my_app/screens/home_screen.dart';
 import 'package:my_app/screens/home_screen_example.dart';
 import 'package:my_app/screens/home_screen_example02.dart';
+import 'package:my_app/screens/home_screen_example03.dart';
+import 'package:my_app/screens/home_screen_example04.dart';
+import 'package:my_app/screens/home_screen_example05.dart';
 import 'package:my_app/screens/home_screen_shopping.dart';
 import 'package:my_app/theme/colors.dart';
-
 
 void main() {
   // runApp(MyApp());
@@ -28,5 +30,5 @@ void main() {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreenExample02()));
+      home: HomeScreenExample05()));
 }
