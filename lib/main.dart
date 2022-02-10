@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/screens/HomeScreenFb.dart';
+import 'package:my_app/screens/counter_app.dart';
 import 'package:my_app/screens/home_screen.dart';
 import 'package:my_app/screens/home_screen_example.dart';
 import 'package:my_app/screens/home_screen_example02.dart';
@@ -26,9 +28,11 @@ void main() {
 
   runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'HomeShoppingPage',
+      title: 'Flutter Facebook Ui',
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.grey[200]
       ),
-      home: HomeScreenExample05()));
+      home: HomeScreenFb()));
 }
