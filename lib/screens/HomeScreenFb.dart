@@ -3,6 +3,7 @@ import 'package:my_app/widgets/circle_button.dart';
 import 'package:my_app/widgets/create_post_container.dart';
 import 'package:my_app/data/data.dart';
 import 'package:my_app/widgets/room.dart';
+import 'package:my_app/widgets/stories.dart';
 
 class HomeScreenFb extends StatelessWidget {
   @override
@@ -39,8 +40,12 @@ class HomeScreenFb extends StatelessWidget {
         SliverToBoxAdapter(
             child: CreatePostContainer(currentUser: currentUser)),
         SliverPadding(
-          padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
+            padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
             sliver: SliverToBoxAdapter(child: Rooms(onlineUser: onlineUser))),
+        SliverPadding(
+            padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
+            sliver: SliverToBoxAdapter(
+                child: Stories(currentUser: currentUser, story: story))),
       ],
     ));
   }
