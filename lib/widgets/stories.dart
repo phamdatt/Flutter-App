@@ -13,6 +13,7 @@ class Stories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.white,
       height: 200,
       child: ListView.builder(
           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
@@ -84,7 +85,21 @@ class _StoryCard extends StatelessWidget {
                 : ProfileAvatar(
                     imageUrl: story!.user.imageUrl,
                   hasBorder:!story!.isViewed
-                  ))
+                  )),
+                  Positioned(
+                    bottom: 8,
+                    left: 8,right: 8,
+                    child:Text(
+                      isAddStory ? 'Add to Story':story!.user.name,
+                      style:const TextStyle(
+                        color:Colors.white,
+                        fontWeight: FontWeight.bold
+                      ),
+                      maxLines: 2,
+                      overflow: TextOverflow.clip,
+                    )
+                  )
+                  
       ],
     );
   }

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/models/Post.dart';
 import 'package:my_app/widgets/circle_button.dart';
 import 'package:my_app/widgets/create_post_container.dart';
 import 'package:my_app/data/data.dart';
 import 'package:my_app/widgets/room.dart';
 import 'package:my_app/widgets/stories.dart';
+
+import '../widgets/post_container.dart';
 
 class HomeScreenFb extends StatelessWidget {
   @override
@@ -46,6 +49,11 @@ class HomeScreenFb extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
             sliver: SliverToBoxAdapter(
                 child: Stories(currentUser: currentUser, story: story))),
+        SliverList(
+            delegate: SliverChildBuilderDelegate((context, index) {
+          final Post post = posts[index];
+          return PostContainer(post: post);
+        }, childCount: posts.length))
       ],
     ));
   }

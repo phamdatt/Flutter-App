@@ -8,6 +8,7 @@ import 'package:my_app/screens/home_screen_example03.dart';
 import 'package:my_app/screens/home_screen_example04.dart';
 import 'package:my_app/screens/home_screen_example05.dart';
 import 'package:my_app/screens/home_screen_shopping.dart';
+import 'package:my_app/screens/nav_screens.dart';
 import 'package:my_app/theme/colors.dart';
 
 void main() {
@@ -34,5 +35,5 @@ void main() {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.grey[200]
       ),
-      home: HomeScreenFb()));
+      home: NavScreen()));
 }
