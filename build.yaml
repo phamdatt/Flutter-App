@@ -1,0 +1,8 @@
+targets:
+  $default:
+    builders:
+      fast_i18n:
+        options:
+          input_directory: lib/i18n
+          output_directory: lib/gen 
+          translate_var: t

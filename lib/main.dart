@@ -1,39 +1,61 @@
+import 'package:my_app/gen/string.g.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/screens/HomeScreenFb.dart';
-import 'package:my_app/screens/counter_app.dart';
-import 'package:my_app/screens/home_screen.dart';
-import 'package:my_app/screens/home_screen_example.dart';
-import 'package:my_app/screens/home_screen_example02.dart';
-import 'package:my_app/screens/home_screen_example03.dart';
-import 'package:my_app/screens/home_screen_example04.dart';
-import 'package:my_app/screens/home_screen_example05.dart';
-import 'package:my_app/screens/home_screen_shopping.dart';
-import 'package:my_app/screens/nav_screens.dart';
-import 'package:my_app/theme/colors.dart';
+
 
 void main() {
-  // runApp(MyApp());
-  // runApp(Test());
-  // runApp(Containers());
-  // runApp(MaterialApp(
-  //   title:'Flutter tourial',
-  //   home:TourialMaterial(),
-  // ));
-  // runApp(MaterialApp(
-  //     title: 'HomePage',
-  //     home: Scaffold(
-  //       body: Column(
-  //         children: [Text("hell")],
-  //       ),
-  //     )));
+  WidgetsFlutterBinding.ensureInitialized();
+  LocaleSettings.useDeviceLocale(); // initialize with the right locale
+  runApp(TranslationProvider( // wrap with TranslationProvider
+    child: MyApp(),
+  ));
+}
 
-  runApp(MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Facebook Ui',
-      theme: ThemeData(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: Colors.grey[200]
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      locale: TranslationProvider.of(context).flutterLocale,
+      supportedLocales: LocaleSettings.supportedLocales,
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // get t variable, will trigger rebuild on locale change
+    // otherwise just call t directly (if locale is not changeable)
+    final t = AppLocale.vi.translations; 
+
+    return Scaffold(
+      
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(t.name),     
+          ],
+        ),
       ),
-      home: NavScreen()));
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        child: Icon(Icons.add),
+      ),
+    );
+  }
 }
