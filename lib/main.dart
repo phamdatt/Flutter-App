@@ -1,11 +1,15 @@
 import 'package:my_app/gen/string.g.dart';
 import 'package:flutter/material.dart';
-
+import 'package:my_app/screens/HomeScreenFb.dart';
+import 'package:my_app/screens/home_screen_example06.dart';
+import 'package:my_app/screens/home_screen_example07.dart';
+import 'package:my_app/screens/home_screen_shopping.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   LocaleSettings.useDeviceLocale(); // initialize with the right locale
-  runApp(TranslationProvider( // wrap with TranslationProvider
+  runApp(TranslationProvider(
+    // wrap with TranslationProvider
     child: MyApp(),
   ));
 }
@@ -17,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       locale: TranslationProvider.of(context).flutterLocale,
       supportedLocales: LocaleSettings.supportedLocales,
-      home: MyHomePage(),
+      home: HomeScreenExample07(),
     );
   }
 }
@@ -40,15 +44,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     // get t variable, will trigger rebuild on locale change
     // otherwise just call t directly (if locale is not changeable)
-    final t = AppLocale.vi.translations; 
+    final t = AppLocale.vi.translations;
 
     return Scaffold(
-      
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(t.name),     
+            Text(t.name),
           ],
         ),
       ),
