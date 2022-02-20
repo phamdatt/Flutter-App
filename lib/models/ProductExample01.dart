@@ -25,3 +25,15 @@ class ProductExample01 {
     );
   }
 }
+
+ProductExample01 product = ProductExample01(
+  id: "1",
+  price: 1600,
+  title: "Wood Frame",
+  image: "https://i.imgur.com/sI4GvE6.png",
+  category: "Chair",
+  subTitle: "Tieton Armchair",
+  description: description,
+);
+String description =
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. When an unknown printer took a galley.";
