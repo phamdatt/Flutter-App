@@ -13,3 +13,9 @@ const kPrimaryColor = Color(0xFF0C9869);
 const kPrimarySpeedCodekSecondarySpeedCodeColor = Color(0xFFA95EFA);
 const kSecondarySpeedCodeColor = Color(0xFFF3F6F8);
 const kTextSpeedCodeColor = Color(0xFF171717);
+
+//
+const  primary = Color(0xFF04be4e);
+const Color black = Color(0xFF000000);
+const Color white = Color(0xFFFFFFFF);
+const Color grey = Color(0xFF5f5f5f);

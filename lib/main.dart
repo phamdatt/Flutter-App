@@ -1,13 +1,6 @@
 import 'package:my_app/gen/string.g.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/screens/HomeScreenFb.dart';
-import 'package:my_app/screens/home_screen_example06.dart';
-import 'package:my_app/screens/home_screen_example07.dart';
-import 'package:my_app/screens/home_screen_example08.dart';
-import 'package:my_app/screens/home_screen_example09.dart';
-import 'package:my_app/screens/home_screen_example10.dart';
-import 'package:my_app/screens/home_screen_shopping.dart';
-import 'package:my_app/screens/home_screen_speed_code.dart';
+import 'package:my_app/screens/home_screen_sptify.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,8 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       locale: TranslationProvider.of(context).flutterLocale,
       supportedLocales: LocaleSettings.supportedLocales,
-     
-      home: HomeScreenSpeedCode(),
+      home: HomeScreenSpotify(),
     );
   }
 }
