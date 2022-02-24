@@ -239,7 +239,7 @@ class _TranslationProviderState extends State<TranslationProvider> {
 	Widget build(BuildContext context) {
 		return _InheritedLocaleData(
 			locale: locale,
-			child: widget.child,
+			child: widget().child,
 		);
 	}
 }

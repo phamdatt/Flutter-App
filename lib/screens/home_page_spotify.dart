@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/contants.dart';
 import 'package:my_app/json/songs.json.dart';
+import 'package:my_app/screens/album_page.dart';
 import 'package:my_app/theme/colors.dart';
+import 'package:page_transition/page_transition.dart';
 
 class HomePageSpotify extends StatefulWidget {
   @override
@@ -42,6 +44,7 @@ class _HomePageSpotify extends State<HomePageSpotify> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+          SizedBox(height: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -96,7 +99,15 @@ class _HomePageSpotify extends State<HomePageSpotify> {
                         (index) => Padding(
                               padding: const EdgeInsets.only(right: 20),
                               child: GestureDetector(
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      PageTransition(
+                                          alignment: Alignment.bottomCenter,
+                                          type: PageTransitionType.scale,
+                                          child:
+                                              AlBumPage(song: songs[index])));
+                                },
                                 child: Column(
                                   children: <Widget>[
                                     Container(
@@ -283,7 +294,15 @@ class _HomePageSpotify extends State<HomePageSpotify> {
                         (index) => Padding(
                               padding: const EdgeInsets.only(right: 20),
                               child: GestureDetector(
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      PageTransition(
+                                          alignment: Alignment.bottomCenter,
+                                          type: PageTransitionType.scale,
+                                          child:
+                                              AlBumPage(song: songs[index])));
+                                },
                                 child: Column(
                                   children: <Widget>[
                                     Container(

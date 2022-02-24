@@ -46,7 +46,7 @@ class _HomeScreenSpotify extends State<HomeScreenSpotify> {
 
   List<IconData> icons = [
     Icons.home,
-    Icons.list,
+    Icons.photo_album,
     Icons.notifications,
     Icons.verified_user_sharp
   ];
