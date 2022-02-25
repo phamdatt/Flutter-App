@@ -15,7 +15,13 @@ const kSecondarySpeedCodeColor = Color(0xFFF3F6F8);
 const kTextSpeedCodeColor = Color(0xFF171717);
 
 //
-const  primary = Color(0xFF04be4e);
+const primary = Color(0xFF04be4e);
 const Color black = Color(0xFF000000);
 const Color white = Color(0xFFFFFFFF);
 const Color grey = Color(0xFF5f5f5f);
+
+//
+const primaryColor = Color(0xFF2697FF);
+const secondaryColor = Color(0xFF2A2D3E);
+const bgColor = Color(0xFF212332);
+const defaultPadding = 16.0;
