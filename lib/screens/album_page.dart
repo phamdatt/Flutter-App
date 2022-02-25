@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/json/songs.json.dart';
+import 'package:my_app/screens/details/music_detail_page.dart';
 import 'package:my_app/theme/colors.dart';
+import 'package:page_transition/page_transition.dart';
 
 class AlBumPage extends StatefulWidget {
   final dynamic song;
@@ -74,7 +76,21 @@ class _AlBumPageState extends State<AlBumPage> {
                         (index) => Padding(
                               padding: const EdgeInsets.only(right: 20),
                               child: GestureDetector(
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      PageTransition(
+                                          alignment: Alignment.bottomCenter,
+                                          child: MusicDetailPage(
+                                              title: songs[index]['title'],
+                                              description: songs[index]
+                                                  ['description'],
+                                              color: songs[index]['color'],
+                                              img: songs[index]['img'],
+                                              songUrl: songs[index]
+                                                  ['song_url']),
+                                          type: PageTransitionType.scale));
+                                },
                                 child: Column(
                                   children: <Widget>[
                                     Container(
@@ -139,7 +155,23 @@ class _AlBumPageState extends State<AlBumPage> {
                             padding: const EdgeInsets.only(
                                 left: 30, right: 30, bottom: 10),
                             child: GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    PageTransition(
+                                        alignment: Alignment.bottomCenter,
+                                        child: MusicDetailPage(
+                                            title: widget().song[index]
+                                                ['title'],
+                                            description: widget().song[index]
+                                                ['description'],
+                                            color: widget().song[index]
+                                                ['color'],
+                                            img: widget().song[index]['img'],
+                                            songUrl: widget().song[index]
+                                                ['song_url']),
+                                        type: PageTransitionType.scale));
+                              },
                               child: Row(
                                 children: <Widget>[
                                   Container(
