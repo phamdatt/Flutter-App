@@ -21,7 +21,13 @@ const Color white = Color(0xFFFFFFFF);
 const Color grey = Color(0xFF5f5f5f);
 
 //
-const primaryColor = Color(0xFF2697FF);
-const secondaryColor = Color(0xFF2A2D3E);
-const bgColor = Color(0xFF212332);
-const defaultPadding = 16.0;
+// const primaryColor = Color(0xFF2697FF);
+// const secondaryColor = Color(0xFF2A2D3E);
+// const bgColor = Color(0xFF212332);
+// const defaultPadding = 16.0;
+
+const Color primaryColor = Color(0xFFF67952);
+const Color bgColor = Color(0xFFFBFBFD);
+
+const double defaultPadding = 16.0;
+const double defaultBorderRadius = 12.0;

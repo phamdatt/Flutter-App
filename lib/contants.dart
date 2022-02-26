@@ -34,7 +34,9 @@ class AppUi {
   static final String imagesCay2 = imagesPath + "cay2.png";
   static final String imagesCay3 = imagesPath + "cay3.png";
   static final String imageBottom = imagesPath + "bottom.png";
-  static final String iconHearts = imagesPathIcon +"heart-icon.svg";
-   static final String iconFlower = imagesPathIcon +"flower.svg";
-    static final String iconSun = imagesPathIcon +"sun.svg";
+  static final String iconHearts = imagesPathIcon + "heart-icon.svg";
+  static final String iconFlower = imagesPathIcon + "flower.svg";
+  static final String iconSun = imagesPathIcon + "sun.svg";
+  static final String iconNotifications = imagesPathIcon + "Notification.svg";
+  static final String fadoLogo = imagesPathIcon + "logo_tet_fado_v1.svg";
 }

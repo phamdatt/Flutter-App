@@ -1,5 +1,6 @@
 import 'package:my_app/gen/string.g.dart';
 import 'package:flutter/material.dart';
+import 'package:my_app/screens/home_screen_ecomerce.dart';
 import 'package:my_app/screens/home_screen_sptify.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       locale: TranslationProvider.of(context).flutterLocale,
       supportedLocales: LocaleSettings.supportedLocales,
-      home: HomeScreenSpotify(),
+      home: HomeScreenEcomerce(),
     );
   }
 }
