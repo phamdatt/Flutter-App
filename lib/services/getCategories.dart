@@ -1,4 +1,4 @@
-import 'package:my_app/models/Category.dart';
+import 'package:doric/models/Category.dart';
 import 'package:dio/dio.dart';
 
 Future<List<Category>> fetchCategory() async {

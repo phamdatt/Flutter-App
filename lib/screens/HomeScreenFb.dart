@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/models/Post.dart';
-import 'package:my_app/widgets/circle_button.dart';
-import 'package:my_app/widgets/create_post_container.dart';
-import 'package:my_app/data/data.dart';
-import 'package:my_app/widgets/room.dart';
-import 'package:my_app/widgets/stories.dart';
+import 'package:doric/models/Post.dart';
+import 'package:doric/widgets/circle_button.dart';
+import 'package:doric/widgets/create_post_container.dart';
+import 'package:doric/data/data.dart';
+import 'package:doric/widgets/room.dart';
+import 'package:doric/widgets/stories.dart';
 
 import '../widgets/post_container.dart';
 

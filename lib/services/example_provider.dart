@@ -1,6 +1,6 @@
 // import 'package:flutter/cupertino.dart';
 // import 'package:flutter/material.dart';
-// import 'package:my_app/main.dart';
+// import 'package:doric/main.dart';
 // import 'package:provider/provider.dart';
 
 // class ExampleProvider extends StatelessWidget {

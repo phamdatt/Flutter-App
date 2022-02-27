@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_app/contants.dart';
-import 'package:my_app/theme/colors.dart';
+import 'package:doric/contants.dart';
+import 'package:doric/theme/colors.dart';
 
 import 'detail_screen_example02.dart';
 

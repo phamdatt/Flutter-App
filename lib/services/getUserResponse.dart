@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:my_app/models/Users.dart';
+import 'package:doric/models/Users.dart';
 
 Future<Users> getUserCallApi() async {
   Dio dio = Dio();

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_app/cart/cart.dart';
-import 'package:my_app/contants.dart';
-import 'package:my_app/theme/colors.dart';
+import 'package:doric/cart/cart.dart';
+import 'package:doric/contants.dart';
+import 'package:doric/theme/colors.dart';
 import 'package:page_transition/page_transition.dart';
 
 class MainHeader extends StatelessWidget {

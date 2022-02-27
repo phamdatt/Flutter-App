@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/models/User.dart';
-import 'package:my_app/widgets/profile_avatart.dart';
+import 'package:doric/models/User.dart';
+import 'package:doric/widgets/profile_avatart.dart';
 
 class Rooms extends StatelessWidget {
   final List<User> onlineUser;

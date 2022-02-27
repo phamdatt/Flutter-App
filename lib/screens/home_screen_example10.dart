@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/models/ProductExample01.dart';
-import 'package:my_app/services/getProducts.dart';
+import 'package:doric/models/ProductExample01.dart';
+import 'package:doric/services/getProducts.dart';
 
 class HomeScreenExample10 extends StatelessWidget {
   @override

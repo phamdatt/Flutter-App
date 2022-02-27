@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/contants.dart';
-import 'package:my_app/widgets/main_header.dart';
+import 'package:doric/contants.dart';
+import 'package:doric/widgets/main_header.dart';
 
 class CategoryMenu extends StatelessWidget {
   @override

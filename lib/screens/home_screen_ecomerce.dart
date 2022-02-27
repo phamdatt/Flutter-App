@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_app/contants.dart';
-import 'package:my_app/models/CategoryDoric.dart';
-import 'package:my_app/models/ProductDoric.dart';
-import 'package:my_app/product/product_detail.dart';
-import 'package:my_app/screens/category_menu.dart';
-import 'package:my_app/theme/colors.dart';
-import 'package:my_app/widgets/main_header.dart';
+import 'package:doric/contants.dart';
+import 'package:doric/models/CategoryDoric.dart';
+import 'package:doric/models/ProductDoric.dart';
+import 'package:doric/product/product_detail.dart';
+import 'package:doric/screens/category_menu.dart';
+import 'package:doric/theme/colors.dart';
+import 'package:doric/widgets/main_header.dart';
 import 'package:page_transition/page_transition.dart';
 
 class HomeScreenEcomerce extends StatefulWidget {

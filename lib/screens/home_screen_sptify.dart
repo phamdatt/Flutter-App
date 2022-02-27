@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/screens/home_page_spotify.dart';
+import 'package:doric/screens/home_page_spotify.dart';
 
 class HomeScreenSpotify extends StatefulWidget {
   @override

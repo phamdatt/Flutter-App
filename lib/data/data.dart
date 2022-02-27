@@ -1,5 +1,5 @@
-import 'package:my_app/models/Story.dart';
-import 'package:my_app/models/User.dart';
+import 'package:doric/models/Story.dart';
+import 'package:doric/models/User.dart';
 
 import '../models/Post.dart';
 

@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/models/Post.dart';
-import 'package:my_app/widgets/profile_avatart.dart';
+import 'package:doric/models/Post.dart';
+import 'package:doric/widgets/profile_avatart.dart';
 
 class PostContainer extends StatelessWidget {
   final Post post;

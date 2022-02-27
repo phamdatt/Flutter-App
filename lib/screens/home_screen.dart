@@ -2,12 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_app/contants.dart';
-import 'package:my_app/theme/colors.dart';
-import 'package:my_app/widgets/bottom_nav.dart';
-import 'package:my_app/widgets/category_card.dart';
-import 'package:my_app/widgets/search_bar.dart';
-import 'package:my_app/screens/detail.screen.dart';
+import 'package:doric/contants.dart';
+import 'package:doric/theme/colors.dart';
+import 'package:doric/widgets/bottom_nav.dart';
+import 'package:doric/widgets/category_card.dart';
+import 'package:doric/widgets/search_bar.dart';
+import 'package:doric/screens/detail.screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

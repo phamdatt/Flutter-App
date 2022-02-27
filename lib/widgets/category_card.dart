@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:my_app/theme/colors.dart';
+import 'package:doric/theme/colors.dart';
 
 class CategoryCard extends StatelessWidget {
   final String svgSrc;

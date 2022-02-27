@@ -2,7 +2,7 @@
 
 // ignore: unused_import
 import 'package:dio/dio.dart';
-import 'package:my_app/models/ProductExample01.dart';
+import 'package:doric/models/ProductExample01.dart';
 
 Future<List<ProductExample01>> getProductsByDio() async {
   Dio dio = Dio();

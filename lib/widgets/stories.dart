@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/data/data.dart';
-import 'package:my_app/models/Story.dart';
-import 'package:my_app/models/User.dart';
-import 'package:my_app/widgets/profile_avatart.dart';
+import 'package:doric/data/data.dart';
+import 'package:doric/models/Story.dart';
+import 'package:doric/models/User.dart';
+import 'package:doric/widgets/profile_avatart.dart';
 
 class Stories extends StatelessWidget {
   final User currentUser;

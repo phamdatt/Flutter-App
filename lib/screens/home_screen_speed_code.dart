@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:my_app/contants.dart';
-import 'package:my_app/screens/body.dart';
-import 'package:my_app/services/size_config.dart';
-import 'package:my_app/theme/colors.dart';
+import 'package:doric/contants.dart';
+import 'package:doric/screens/body.dart';
+import 'package:doric/services/size_config.dart';
+import 'package:doric/theme/colors.dart';
 
 class HomeScreenSpeedCode extends StatelessWidget {
   @override

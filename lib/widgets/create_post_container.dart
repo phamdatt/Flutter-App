@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/models/User.dart';
-import 'package:my_app/widgets/profile_avatart.dart';
+import 'package:doric/models/User.dart';
+import 'package:doric/widgets/profile_avatart.dart';
 
 class CreatePostContainer extends StatelessWidget {
   // final User currentUser;

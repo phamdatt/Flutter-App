@@ -1,4 +1,4 @@
-import 'package:my_app/models/User.dart';
+import 'package:doric/models/User.dart';
 
 class Post {
   final User user;

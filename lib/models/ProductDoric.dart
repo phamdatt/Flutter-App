@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/models/Product.dart';
+import 'package:doric/models/Product.dart';
 
 class ProductDoric {
   final String productName;

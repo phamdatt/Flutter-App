@@ -1,7 +1,7 @@
-import 'package:my_app/gen/string.g.dart';
+import 'package:doric/gen/string.g.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/screens/home_screen_ecomerce.dart';
-import 'package:my_app/screens/home_screen_sptify.dart';
+import 'package:doric/screens/home_screen_ecomerce.dart';
+import 'package:doric/screens/home_screen_sptify.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

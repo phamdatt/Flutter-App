@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_app/contants.dart';
-import 'package:my_app/size_config.dart';
-import 'package:my_app/theme/colors.dart';
+import 'package:doric/contants.dart';
+import 'package:doric/size_config.dart';
+import 'package:doric/theme/colors.dart';
 
 class HomeScreenExample01 extends StatelessWidget {
   @override

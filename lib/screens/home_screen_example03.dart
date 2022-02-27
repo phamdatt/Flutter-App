@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_app/contants.dart';
-import 'package:my_app/widgets/header.dart';
+import 'package:doric/contants.dart';
+import 'package:doric/widgets/header.dart';
 
 class HomeScreenExample03 extends StatelessWidget {
   @override

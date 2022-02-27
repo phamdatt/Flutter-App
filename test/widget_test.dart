@@ -7,8 +7,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:my_app/main.dart';
-import 'package:my_app/my_app.dart';
+import 'package:doric/main.dart';
+import 'package:doric/doric.dart';
 
 
 void main() {

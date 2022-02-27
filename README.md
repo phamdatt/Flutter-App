@@ -1,4 +1,4 @@
-# my_app
+# doric
 
 A new Flutter project.
 

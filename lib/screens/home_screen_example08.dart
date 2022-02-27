@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/models/Category.dart';
-import 'package:my_app/services/getCategories.dart';
+import 'package:doric/models/Category.dart';
+import 'package:doric/services/getCategories.dart';
 
 class HomeScreenExample08 extends StatelessWidget {
 

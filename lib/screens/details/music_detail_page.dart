@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/theme/colors.dart';
+import 'package:doric/theme/colors.dart';
 
 class MusicDetailPage extends StatefulWidget {
   final String title;

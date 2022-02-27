@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/models/Users.dart';
-import 'package:my_app/services/getUserResponse.dart';
+import 'package:doric/models/Users.dart';
+import 'package:doric/services/getUserResponse.dart';
 
 class HomeScreenExample09 extends StatelessWidget {
   @override

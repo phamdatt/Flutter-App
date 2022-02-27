@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/contants.dart';
-import 'package:my_app/json/songs.json.dart';
-import 'package:my_app/screens/album_page.dart';
-import 'package:my_app/theme/colors.dart';
+import 'package:doric/contants.dart';
+import 'package:doric/json/songs.json.dart';
+import 'package:doric/screens/album_page.dart';
+import 'package:doric/theme/colors.dart';
 import 'package:page_transition/page_transition.dart';
 
 class HomePageSpotify extends StatefulWidget {

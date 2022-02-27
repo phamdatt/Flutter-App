@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_app/contants.dart';
-import 'package:my_app/theme/colors.dart';
-import 'package:my_app/widgets/search_bar.dart';
+import 'package:doric/contants.dart';
+import 'package:doric/theme/colors.dart';
+import 'package:doric/widgets/search_bar.dart';
 
 class DetailScreen extends StatelessWidget {
   const DetailScreen({Key? key}) : super(key: key);

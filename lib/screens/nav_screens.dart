@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/screens/HomeScreenFb.dart';
+import 'package:doric/screens/HomeScreenFb.dart';
 
 class NavScreen extends StatefulWidget {
   @override

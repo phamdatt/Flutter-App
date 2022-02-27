@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/models/Category.dart';
-import 'package:my_app/models/ProductExample01.dart';
-import 'package:my_app/screens/HomeScreenFb.dart';
-import 'package:my_app/screens/details/details_speed_code.dart';
-import 'package:my_app/services/getCategories.dart';
-import 'package:my_app/services/getProducts.dart';
-import 'package:my_app/services/size_config.dart';
-import 'package:my_app/theme/colors.dart';
+import 'package:doric/models/Category.dart';
+import 'package:doric/models/ProductExample01.dart';
+import 'package:doric/screens/HomeScreenFb.dart';
+import 'package:doric/screens/details/details_speed_code.dart';
+import 'package:doric/services/getCategories.dart';
+import 'package:doric/services/getProducts.dart';
+import 'package:doric/services/size_config.dart';
+import 'package:doric/theme/colors.dart';
 
 class Body extends StatelessWidget {
   @override

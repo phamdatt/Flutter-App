@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_app/contants.dart';
-import 'package:my_app/theme/colors.dart';
-import 'package:my_app/widgets/body.dart';
+import 'package:doric/contants.dart';
+import 'package:doric/theme/colors.dart';
+import 'package:doric/widgets/body.dart';
 
 class HomeShoppingPage extends StatelessWidget {
   const HomeShoppingPage({Key? key}) : super(key: key);

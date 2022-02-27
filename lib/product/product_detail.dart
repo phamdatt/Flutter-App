@@ -1,9 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_app/contants.dart';
-import 'package:my_app/models/ProductDoric.dart';
-import 'package:my_app/theme/colors.dart';
-import 'package:my_app/widgets/main_header.dart';
+import 'package:doric/contants.dart';
+import 'package:doric/models/ProductDoric.dart';
+import 'package:doric/theme/colors.dart';
+import 'package:doric/widgets/main_header.dart';
 
 class ProductDetailPage extends StatelessWidget {
   final ProductDoric product;

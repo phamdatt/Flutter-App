@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/contants.dart';
-import 'package:my_app/screens/detail_shopping.dart';
-import 'package:my_app/theme/colors.dart';
-import 'package:my_app/models/Product.dart';
+import 'package:doric/contants.dart';
+import 'package:doric/screens/detail_shopping.dart';
+import 'package:doric/theme/colors.dart';
+import 'package:doric/models/Product.dart';
 
 class Body extends StatelessWidget {
   final String title;
